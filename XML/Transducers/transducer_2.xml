@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE transducer SYSTEM "transducer.dtd">
+<transducer>
+  
+  <signature-in>
+    <symbol name="f" arity="2"/>
+    <symbol name="a" arity="1"/>
+    <symbol name="b" arity="1"/>
+    <symbol name="#" arity="0"/>    
+  </signature-in>
+  
+  <signature-out>
+    <symbol name="a" arity="1"/>
+    <symbol name="b" arity="1"/>
+    <symbol name="#" arity="0"/>  
+  </signature-out>
+  
+  
+  <states> 
+    <state name="0"/>
+  </states>
+  
+  <axiom>
+    <call state="0" variable="1"/>
+  </axiom>
+  
+  <rules>
+    <rule state="0" symbol="f">
+      <call state="0" variable="1" />
+    </rule>
+    
+    <rule state="0" symbol="a">
+      <context symbol="a">
+        <call state="0" variable="1"/>
+      </context>
+    </rule>
+    
+    <rule state="0" symbol="b">
+      <context symbol="b">
+        <call state="0" variable="1"/>
+      </context>
+    </rule>
+    
+    <rule state="0" symbol="#">
+      <context symbol="#"/>
+    </rule>
+  </rules>
+  
+</transducer>
+

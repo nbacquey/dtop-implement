@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE transducer SYSTEM "transducer.dtd">
+<transducer>
+  
+  <signature-in>
+    <symbol name="g" arity="2"/>
+    <symbol name="a" arity="1"/>
+    <symbol name="b" arity="1"/>
+    <symbol name="c" arity="1"/>
+    <symbol name="d" arity="1"/>
+    <symbol name="#" arity="0"/>  
+  </signature-in>
+  
+  <signature-out>
+    <symbol name="h" arity="2"/>
+    <symbol name="a" arity="1"/>
+    <symbol name="b" arity="1"/>
+    <symbol name="c" arity="1"/>
+    <symbol name="d" arity="1"/>
+    <symbol name="#" arity="0"/>  
+  </signature-out>
+  
+  
+  <states> 
+    <state name="1"/>
+    <state name="2"/>
+  </states>
+  
+  <axiom>
+    <call state="1" variable="1"/>
+  </axiom>
+  
+  <rules>
+    <rule state="1" symbol="g">
+      <context symbol="h">
+        <call state="1" variable="1" />
+        <call state="2" variable="2" />
+      </context>
+    </rule>
+    
+    <rule state="2" symbol="g">
+      <context symbol="h">
+        <call state="1" variable="1" />
+        <call state="2" variable="2" />
+      </context>
+    </rule>
+    
+    <rule state="1" symbol="a">
+      <context symbol="a">
+        <call state="1" variable="1"/>
+      </context>
+    </rule>
+    
+    <rule state="1" symbol="b">
+      <context symbol="d">
+        <call state="1" variable="1"/>
+      </context>
+    </rule>
+    
+    <rule state="1" symbol="c">
+      <context symbol="c">
+        <call state="1" variable="1"/>
+      </context>
+    </rule>
+    
+    <rule state="1" symbol="d">
+      <context symbol="d">
+        <call state="1" variable="1"/>
+      </context>
+    </rule>
+    
+    <rule state="1" symbol="#">
+      <context symbol="#"/>
+    </rule>
+    
+    <rule state="2" symbol="a">
+      <context symbol="c">
+        <call state="2" variable="1"/>
+      </context>
+    </rule>
+    
+    <rule state="2" symbol="b">
+      <context symbol="b">
+        <call state="2" variable="1"/>
+      </context>
+    </rule>
+    
+    <rule state="2" symbol="c">
+      <context symbol="c">
+        <call state="2" variable="1"/>
+      </context>
+    </rule>
+    
+    <rule state="2" symbol="d">
+      <context symbol="d">
+        <call state="2" variable="1"/>
+      </context>
+    </rule>
+    
+    <rule state="2" symbol="#">
+      <context symbol="#"/>
+    </rule>
+  </rules>
+  
+</transducer>
+

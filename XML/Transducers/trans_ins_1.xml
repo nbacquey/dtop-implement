@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE transducer SYSTEM "transducer.dtd">
+<transducer>
+  
+  <signature-in>
+    <symbol name="f" arity="2"/>
+    <symbol name="g" arity="2"/>
+    <symbol name="#" arity="0"/>    
+  </signature-in>
+  
+  <signature-out>
+    <symbol name="f" arity="2"/>
+    <symbol name="g" arity="2"/>
+    <symbol name="#" arity="0"/>
+    <symbol name="pkg" arity="0"/>
+  </signature-out>
+  
+  
+  <states> 
+    <state name="1"/>
+    <state name="2"/>
+  </states>
+  
+  <axiom>
+    <call state="1" variable="1"/>
+  </axiom>
+  
+  <rules>
+    
+    <rule state="1" symbol="f">
+      <context symbol="f">
+        <call state="1" variable="1" />
+        <call state="2" variable="2" />
+      </context>
+    </rule>
+    
+    <rule state="2" symbol="f">
+      <context symbol="f">
+        <call state="2" variable="1" />
+        <call state="2" variable="2" />
+      </context>
+    </rule>
+    
+    <rule state="1" symbol="g">
+      <context symbol="g">
+        <call state="1" variable="1" />
+        <call state="2" variable="2" />
+      </context>
+    </rule>
+    
+    <rule state="2" symbol="g">
+      <context symbol="g">
+        <call state="2" variable="1" />
+        <call state="2" variable="2" />
+      </context>
+    </rule>
+    
+    <rule state="1" symbol="#">
+      <context symbol="pkg"/>
+    </rule>
+    
+    <rule state="2" symbol="#">
+      <context symbol="#"/>
+    </rule>
+    
+  </rules>
+  
+</transducer>
+

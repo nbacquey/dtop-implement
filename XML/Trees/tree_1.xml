@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tree SYSTEM "tree.dtd">
+<tree>
+  <signature>
+    <symbol name="f" arity="2"/>
+    <symbol name="a" arity="1"/>
+    <symbol name="b" arity="1"/>
+    <symbol name="#" arity="0"/>
+  </signature>
+
+  <node symbol="f">
+    <node symbol = "a">
+      <node symbol = "b">
+        <node symbol = "f">    
+          <node symbol = "a">
+            <node symbol = "#"/>
+          </node>
+          <node symbol = "b">
+            <node symbol = "a">
+              <node symbol = "#"/>
+            </node>
+          </node>
+        </node> 
+      </node>
+    </node>
+    <node symbol = "a">
+      <node symbol = "#"/>
+    </node>
+  </node>
+  
+</tree>
+

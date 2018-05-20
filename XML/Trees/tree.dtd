@@ -1,0 +1,14 @@
+<!ELEMENT tree (signature,node)>
+
+<!ELEMENT signature (symbol+) >
+
+<!ELEMENT symbol EMPTY >
+
+<!ATTLIST symbol 
+  name      CDATA   #REQUIRED
+  arity     CDATA   #REQUIRED >
+  
+<!ELEMENT node (node*)>
+
+<!ATTLIST node
+  symbol    CDATA #REQUIRED >

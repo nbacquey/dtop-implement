@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tree SYSTEM "tree.dtd">
+<tree>
+   <signature>
+      <symbol name="g" arity="2"/>
+      <symbol name="a" arity="1"/>
+      <symbol name="b" arity="1"/>
+      <symbol name="c" arity="1"/>
+      <symbol name="#" arity="0"/>
+   </signature>
+   <node symbol="g">
+      <node symbol="c">
+         <node symbol="b">
+            <node symbol="g">
+               <node symbol="c">
+                  <node symbol="a">
+                     <node symbol="#"/>
+                  </node>
+               </node>
+               <node symbol="c">
+                  <node symbol="#"/>
+               </node>
+            </node>
+         </node>
+      </node>
+   </node>
+</tree>

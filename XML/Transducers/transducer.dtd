@@ -1,0 +1,40 @@
+<!ELEMENT transducer (signature-in,signature-out,states,axiom,rules) >
+
+<!ELEMENT signature-in (symbol+) >
+
+<!ELEMENT signature-out (symbol+) >
+
+<!ELEMENT symbol EMPTY >
+
+<!ELEMENT states (state+) >
+
+<!ELEMENT state EMPTY>
+
+<!ELEMENT axiom (context | call) >
+
+<!ELEMENT context ((call | context)*) >
+
+<!ELEMENT call EMPTY >
+
+<!ELEMENT rules (rule)* >
+
+<!ELEMENT rule (context | call) >
+
+<!ATTLIST symbol 
+  name      CDATA   #REQUIRED
+  arity     CDATA   #REQUIRED >
+
+<!ATTLIST state
+  name      CDATA   #REQUIRED >
+  
+<!ATTLIST context
+  symbol    CDATA   #REQUIRED >
+
+<!ATTLIST call
+  state     CDATA   #REQUIRED
+  variable  CDATA   #REQUIRED >
+  
+<!ATTLIST rule
+  symbol    CDATA   #REQUIRED
+  state     CDATA   #REQUIRED >
+  
